@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Política de Privacidade — Welcotech Automation Solutions</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600&display=swap');
+  *{box-sizing:border-box;margin:0;padding:0}
+  :root{
+    --navy:#0f1f3d;--blue:#1a56db;--blue-l:#eff6ff;
+    --text:#1e293b;--muted:#64748b;--border:#e2e8f0;--bg:#f8fafc;
+  }
+  body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);line-height:1.7}
+
+  .topbar{background:var(--navy);padding:16px 32px;display:flex;align-items:center;justify-content:space-between}
+  .logo-txt{color:#fff;font-size:17px;font-weight:700;letter-spacing:-0.3px}
+  .logo-sub{color:#94a3b8;font-size:11px;margin-left:8px}
+  .topbar-back{color:#94a3b8;font-size:12px;text-decoration:none;display:flex;align-items:center;gap:6px}
+  .topbar-back:hover{color:#fff}
+
+  .hero{background:linear-gradient(135deg,var(--navy) 0%,#1e3a6e 100%);padding:48px 32px 40px;color:#fff;text-align:center}
+  .hero-tag{display:inline-block;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);border-radius:99px;padding:4px 14px;font-size:11px;font-weight:600;letter-spacing:1px;text-transform:uppercase;margin-bottom:14px;color:#93c5fd}
+  .hero h1{font-family:'Playfair Display',serif;font-size:28px;font-weight:600;margin-bottom:10px}
+  .hero-meta{display:flex;gap:24px;justify-content:center;margin-top:18px;flex-wrap:wrap}
+  .hero-meta-item{font-size:12px;color:#94a3b8}
+  .hero-meta-item strong{color:#cbd5e1}
+
+  .content{max-width:760px;margin:0 auto;padding:40px 32px 80px}
+
+  .aviso-lgpd{background:var(--blue-l);border:1px solid #bfdbfe;border-left:4px solid var(--blue);border-radius:8px;padding:14px 18px;margin-bottom:32px;font-size:13px;color:#1e40af;line-height:1.7}
+
+  .secao{margin-bottom:40px}
+  .secao-num{display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;background:var(--blue);color:#fff;border-radius:6px;font-size:12px;font-weight:700;margin-right:10px;flex-shrink:0}
+  .secao h2{font-size:16px;font-weight:700;color:var(--navy);margin-bottom:14px;display:flex;align-items:center;padding-bottom:10px;border-bottom:2px solid var(--border)}
+  .secao p{font-size:14px;color:#334155;margin-bottom:12px;line-height:1.8}
+  .secao ul{margin:8px 0 12px 20px}
+  .secao ul li{font-size:14px;color:#334155;margin-bottom:6px;line-height:1.7}
+
+  .card{background:#fff;border:1px solid var(--border);border-radius:10px;padding:18px 20px;margin-bottom:12px}
+  .card-title{font-size:13px;font-weight:700;color:var(--navy);margin-bottom:6px;display:flex;align-items:center;gap:8px}
+  .card-title .icon{font-size:16px}
+  .card p{font-size:13px;color:var(--muted);margin:0;line-height:1.7}
+
+  .direitos-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:8px}
+  .direito-card{background:#fff;border:1px solid var(--border);border-radius:8px;padding:14px 16px}
+  .direito-card .titulo{font-size:12px;font-weight:700;color:var(--navy);margin-bottom:4px;text-transform:uppercase;letter-spacing:0.5px}
+  .direito-card p{font-size:12px;color:var(--muted);margin:0;line-height:1.6}
+
+  .contato-box{background:var(--navy);border-radius:12px;padding:24px 28px;color:#fff;margin-top:32px}
+  .contato-box h3{font-size:15px;font-weight:700;margin-bottom:14px;color:#fff}
+  .contato-item{display:flex;align-items:flex-start;gap:10px;margin-bottom:10px;font-size:13px;color:#cbd5e1}
+  .contato-item strong{color:#fff}
+  .contato-item a{color:#93c5fd;text-decoration:none}
+  .contato-item a:hover{text-decoration:underline}
+
+  .badge{display:inline-block;padding:2px 8px;border-radius:99px;font-size:11px;font-weight:600}
+  .badge-green{background:#dcfce7;color:#166534}
+  .badge-blue{background:#dbeafe;color:#1e40af}
+  .badge-amber{background:#fef3c7;color:#92400e}
+
+  table{width:100%;border-collapse:collapse;margin-top:8px;font-size:13px}
+  table th{background:var(--navy);color:#fff;padding:8px 12px;text-align:left;font-weight:600;font-size:12px}
+  table td{padding:8px 12px;border-bottom:1px solid var(--border);color:#334155;vertical-align:top}
+  table tr:last-child td{border-bottom:none}
+  table tr:nth-child(even) td{background:#f8fafc}
+
+  .update-bar{background:#f1f5f9;border:1px solid var(--border);border-radius:8px;padding:12px 16px;font-size:12px;color:var(--muted);text-align:center;margin-top:40px}
+
+  footer{background:var(--navy);color:#64748b;text-align:center;padding:18px;font-size:12px}
+  footer a{color:#94a3b8;text-decoration:none}
+
+  @media(max-width:600px){
+    .topbar,.hero,.content{padding-left:16px;padding-right:16px}
+    .direitos-grid{grid-template-columns:1fr}
+    .hero h1{font-size:22px}
+  }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div>
+    <span class="logo-txt">WELCOTECH</span>
+    <span class="logo-sub">Automation Solutions</span>
+  </div>
+  <a class="topbar-back" href="https://welcotech.github.io/diagnostico-operacional">← Voltar ao Formulário</a>
+</div>
+
+<div class="hero">
+  <div class="hero-tag">LGPD — Lei 13.709/2018</div>
+  <h1>Política de Privacidade</h1>
+  <p style="color:#94a3b8;font-size:14px;margin-top:8px">Welcotech Comercio de Sistemas de Automação Ltda</p>
+  <div class="hero-meta">
+    <div class="hero-meta-item">Vigência: <strong>02 de maio de 2026</strong></div>
+    <div class="hero-meta-item">Versão: <strong>2.0</strong></div>
+    <div class="hero-meta-item">CNPJ: <strong>10.953.290/0001-41</strong></div>
+  </div>
+</div>
+
+<div class="content">
+
+  <div class="aviso-lgpd">
+    <strong>Esta política está em conformidade com a Lei Geral de Proteção de Dados Pessoais (LGPD) — Lei nº 13.709/2018.</strong> Ela descreve como coletamos, usamos, armazenamos e protegemos seus dados pessoais, bem como os direitos que você possui como titular.
+  </div>
+
+  <!-- 1. IDENTIFICAÇÃO -->
+  <div class="secao">
+    <h2><span class="secao-num">1</span>Identificação do Controlador</h2>
+    <div class="card">
+      <div class="card-title"><span class="icon">🏢</span>Controlador dos Dados</div>
+      <p><strong>Razão Social:</strong> Welcotech Comercio de Sistemas de Automação Ltda<br>
+      <strong>Nome Fantasia:</strong> Welcotech Automation Solutions<br>
+      <strong>CNPJ:</strong> 10.953.290/0001-41<br>
+      <strong>Endereço:</strong> Alameda Rio Negro 503, suite 2020, Alphaville, Barueri-SP, CEP 06454-000<br>
+      <strong>E-mail:</strong> privacidade@welcotech.com<br>
+      <strong>Telefone:</strong> +55 19 99607-8051</p>
+    </div>
+    <div class="card">
+      <div class="card-title"><span class="icon">👤</span>Encarregado de Proteção de Dados (DPO)</div>
+      <p><strong>Nome:</strong> Cesar Fracalanza<br>
+      <strong>E-mail:</strong> cfracalanza@welcotech.com<br>
+      <strong>Telefone:</strong> +55 19 99607-8051<br>
+      O Encarregado é responsável por atender às solicitações dos titulares e comunicar-se com a Autoridade Nacional de Proteção de Dados (ANPD).</p>
+    </div>
+  </div>
+
+  <!-- 2. DADOS COLETADOS -->
+  <div class="secao">
+    <h2><span class="secao-num">2</span>Dados Pessoais Coletados</h2>
+    <p>Coletamos apenas os dados estritamente necessários para as finalidades descritas nesta política, conforme o princípio da minimização previsto na LGPD.</p>
+    <table>
+      <thead>
+        <tr><th>Categoria</th><th>Dados Coletados</th><th>Obrigatoriedade</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Identificação</strong></td>
+          <td>Nome completo, cargo, empresa</td>
+          <td><span class="badge badge-amber">Obrigatório</span></td>
+        </tr>
+        <tr>
+          <td><strong>Contato</strong></td>
+          <td>E-mail profissional, telefone/WhatsApp</td>
+          <td><span class="badge badge-amber">Obrigatório</span></td>
+        </tr>
+        <tr>
+          <td><strong>Dados Operacionais</strong></td>
+          <td>Informações sobre processos logísticos e industriais da empresa do titular</td>
+          <td><span class="badge badge-blue">Opcional</span></td>
+        </tr>
+        <tr>
+          <td><strong>Dados de Navegação</strong></td>
+          <td>Endereço IP, tipo de navegador, páginas acessadas (via cookies técnicos)</td>
+          <td><span class="badge badge-green">Automático</span></td>
+        </tr>
+      </tbody>
+    </table>
+    <p style="margin-top:12px;font-size:12px;color:var(--muted)">Não coletamos dados sensíveis conforme definição do Art. 5º, II da LGPD (dados sobre origem racial, convicção religiosa, saúde, dado genético ou biométrico, etc.).</p>
+  </div>
+
+  <!-- 3. FINALIDADES -->
+  <div class="secao">
+    <h2><span class="secao-num">3</span>Finalidades e Bases Legais</h2>
+    <p>Tratamos seus dados pessoais com fundamento nas seguintes bases legais previstas no Art. 7º da LGPD:</p>
+    <table>
+      <thead>
+        <tr><th>Finalidade</th><th>Base Legal (Art. 7º LGPD)</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Elaboração de proposta técnica e comercial personalizada</td>
+          <td>Inciso V — Execução de contrato ou procedimentos preliminares</td>
+        </tr>
+        <tr>
+          <td>Envio de análise de diagnóstico operacional</td>
+          <td>Inciso I — Consentimento do titular</td>
+        </tr>
+        <tr>
+          <td>Contato para esclarecimento de dúvidas e negociação</td>
+          <td>Inciso IX — Legítimo interesse do controlador</td>
+        </tr>
+        <tr>
+          <td>Envio de comunicações sobre produtos e soluções Welcotech</td>
+          <td>Inciso I — Consentimento do titular</td>
+        </tr>
+        <tr>
+          <td>Cumprimento de obrigações legais e fiscais</td>
+          <td>Inciso II — Cumprimento de obrigação legal</td>
+        </tr>
+      </tbody>
+    </table>
+    <p style="margin-top:12px">Seus dados <strong>não serão utilizados</strong> para finalidades distintas das informadas acima. Qualquer nova finalidade será comunicada previamente.</p>
+  </div>
+
+  <!-- 4. COMPARTILHAMENTO -->
+  <div class="secao">
+    <h2><span class="secao-num">4</span>Compartilhamento de Dados</h2>
+    <p>A Welcotech <strong>não vende, aluga ou comercializa</strong> dados pessoais de seus titulares. O compartilhamento ocorre apenas nas seguintes situações:</p>
+    <ul>
+      <li><strong>Parceiros técnicos e comerciais:</strong> fabricantes de AMRs (Hikrobot, Multiway Robotics) exclusivamente para elaboração de propostas técnicas, sob obrigação de confidencialidade.</li>
+      <li><strong>Prestadores de serviços de TI:</strong> plataformas de automação e envio de e-mail (Make, Gmail) que processam dados em nosso nome, mediante acordos de processamento de dados compatíveis com a LGPD.</li>
+      <li><strong>Obrigação legal:</strong> quando exigido por autoridades competentes, decisão judicial ou regulatória.</li>
+    </ul>
+    <p>Em todos os casos, exigimos que terceiros adotem medidas de segurança compatíveis com esta política.</p>
+  </div>
+
+  <!-- 5. TRANSFERÊNCIA INTERNACIONAL -->
+  <div class="secao">
+    <h2><span class="secao-num">5</span>Transferência Internacional de Dados</h2>
+    <p>Alguns de nossos prestadores de serviços (como plataformas de e-mail e automação) podem processar dados em servidores localizados fora do Brasil. Nesses casos, garantimos que as transferências ocorram apenas para países com nível adequado de proteção ou mediante cláusulas contratuais específicas, conforme Art. 33 da LGPD.</p>
+  </div>
+
+  <!-- 6. RETENÇÃO -->
+  <div class="secao">
+    <h2><span class="secao-num">6</span>Retenção e Exclusão dos Dados</h2>
+    <table>
+      <thead>
+        <tr><th>Situação</th><th>Prazo de Retenção</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Proposta em elaboração ou negociação ativa</td>
+          <td>Durante toda a vigência do relacionamento comercial</td>
+        </tr>
+        <tr>
+          <td>Proposta encerrada sem contratação</td>
+          <td>2 anos após o encerramento</td>
+        </tr>
+        <tr>
+          <td>Contrato firmado</td>
+          <td>5 anos após o encerramento do contrato (obrigação fiscal)</td>
+        </tr>
+        <tr>
+          <td>Dados de navegação (cookies técnicos)</td>
+          <td>12 meses</td>
+        </tr>
+        <tr>
+          <td>Revogação de consentimento</td>
+          <td>Exclusão em até 15 dias úteis, salvo obrigação legal</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- 7. DIREITOS DO TITULAR -->
+  <div class="secao">
+    <h2><span class="secao-num">7</span>Direitos do Titular</h2>
+    <p>Nos termos do Art. 18 da LGPD, você tem os seguintes direitos em relação aos seus dados pessoais:</p>
+    <div class="direitos-grid">
+      <div class="direito-card">
+        <div class="titulo">Confirmação e Acesso</div>
+        <p>Saber se tratamos seus dados e obter uma cópia deles.</p>
+      </div>
+      <div class="direito-card">
+        <div class="titulo">Correção</div>
+        <p>Solicitar a atualização de dados incompletos, inexatos ou desatualizados.</p>
+      </div>
+      <div class="direito-card">
+        <div class="titulo">Anonimização ou Exclusão</div>
+        <p>Solicitar a anonimização, bloqueio ou eliminação de dados desnecessários.</p>
+      </div>
+      <div class="direito-card">
+        <div class="titulo">Portabilidade</div>
+        <p>Receber seus dados em formato estruturado para transferência a outro fornecedor.</p>
+      </div>
+      <div class="direito-card">
+        <div class="titulo">Revogação do Consentimento</div>
+        <p>Retirar o consentimento a qualquer momento, sem prejuízo ao tratamento anterior.</p>
+      </div>
+      <div class="direito-card">
+        <div class="titulo">Oposição</div>
+        <p>Opor-se ao tratamento realizado com fundamento em legítimo interesse.</p>
+      </div>
+      <div class="direito-card">
+        <div class="titulo">Informação sobre Compartilhamento</div>
+        <p>Saber com quais entidades públicas e privadas seus dados foram compartilhados.</p>
+      </div>
+      <div class="direito-card">
+        <div class="titulo">Revisão de Decisões Automatizadas</div>
+        <p>Solicitar revisão de decisões tomadas exclusivamente com base em tratamento automatizado.</p>
+      </div>
+    </div>
+    <p style="margin-top:16px">Para exercer qualquer um desses direitos, envie sua solicitação para <strong>cfracalanza@welcotech.com</strong> com o assunto <strong>"Direitos LGPD"</strong>. Responderemos em até <strong>15 dias úteis</strong>.</p>
+  </div>
+
+  <!-- 8. SEGURANÇA -->
+  <div class="secao">
+    <h2><span class="secao-num">8</span>Segurança dos Dados</h2>
+    <p>Adotamos medidas técnicas e organizacionais adequadas para proteger seus dados pessoais contra acesso não autorizado, alteração, divulgação ou destruição, incluindo:</p>
+    <ul>
+      <li>Transmissão de dados via protocolo HTTPS/TLS</li>
+      <li>Acesso restrito aos dados apenas por colaboradores autorizados</li>
+      <li>Uso de plataformas de e-mail com autenticação em dois fatores</li>
+      <li>Política interna de confidencialidade para todos os colaboradores</li>
+    </ul>
+    <p>Em caso de incidente de segurança que possa acarretar risco ou dano relevante aos titulares, notificaremos a ANPD e os titulares afetados nos prazos previstos pela LGPD.</p>
+  </div>
+
+  <!-- 9. COOKIES -->
+  <div class="secao">
+    <h2><span class="secao-num">9</span>Cookies</h2>
+    <p>Nossos formulários e site utilizam exclusivamente <strong>cookies técnicos essenciais</strong> para o funcionamento das páginas. Não utilizamos cookies de rastreamento, publicidade comportamental ou analytics de terceiros.</p>
+  </div>
+
+  <!-- 10. MENORES -->
+  <div class="secao">
+    <h2><span class="secao-num">10</span>Dados de Menores de Idade</h2>
+    <p>Nossos serviços são destinados exclusivamente a pessoas jurídicas e profissionais maiores de 18 anos. Não coletamos intencionalmente dados de menores de idade. Caso identificarmos tal situação, procederemos à exclusão imediata dos dados.</p>
+  </div>
+
+  <!-- 11. ATUALIZAÇÕES -->
+  <div class="secao">
+    <h2><span class="secao-num">11</span>Atualizações desta Política</h2>
+    <p>Esta política pode ser atualizada periodicamente para refletir mudanças em nossas práticas ou na legislação vigente. A versão mais recente estará sempre disponível nesta página. Em caso de alterações relevantes, notificaremos os titulares por e-mail.</p>
+  </div>
+
+  <!-- CONTATO -->
+  <div class="contato-box">
+    <h3>📬 Contato e Exercício de Direitos</h3>
+    <div class="contato-item"><span>👤</span><div><strong>Encarregado (DPO):</strong> Cesar Fracalanza</div></div>
+    <div class="contato-item"><span>✉️</span><div><strong>E-mail:</strong> <a href="mailto:cfracalanza@welcotech.com">cfracalanza@welcotech.com</a></div></div>
+    <div class="contato-item"><span>📱</span><div><strong>Telefone/WhatsApp:</strong> +55 19 99607-8051</div></div>
+    <div class="contato-item"><span>📍</span><div><strong>Endereço:</strong> Alameda Rio Negro 503, suite 2020, Alphaville, Barueri-SP</div></div>
+    <div class="contato-item"><span>🏛️</span><div><strong>ANPD:</strong> Para reclamações que não forem resolvidas diretamente conosco, você pode contatar a Autoridade Nacional de Proteção de Dados em <a href="https://www.gov.br/anpd" target="_blank">www.gov.br/anpd</a></div></div>
+  </div>
+
+  <div class="update-bar">
+    Política de Privacidade — Welcotech Comercio de Sistemas de Automação Ltda · CNPJ 10.953.290/0001-41<br>
+    Versão 2.0 · Vigência a partir de 02 de maio de 2026 · Em conformidade com a Lei nº 13.709/2018 (LGPD)
+  </div>
+
+</div>
+
+<footer>
+  © 2026 Welcotech Automation Solutions · <a href="mailto:cfracalanza@welcotech.com">cfracalanza@welcotech.com</a> · CNPJ 10.953.290/0001-41
+</footer>
+
+</body>
+</html>
